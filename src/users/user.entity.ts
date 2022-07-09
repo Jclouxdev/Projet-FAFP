@@ -26,10 +26,10 @@ export default class UserEntity extends BaseEntity {
   @Column('varchar', { length: 50 })
   city: string;
 
-  @Column({ length: 100 })
+  @Column({ unique: true, length: 100 })
   email: string;
 
-  @Column('varchar', { length: 50 })
+  @Column('varchar', { unique: true, length: 50 })
   userName: string;
 
   @Column()
